@@ -8,6 +8,10 @@ const styles = {
     },
     main: {
         textAlign:'center'
+    },
+    avatar: {
+        maxWidth:'40%',
+        maxHeight:'40%'
     }
 };
 
@@ -19,7 +23,7 @@ class SummarySection extends React.Component {
 
         return (
         <div className={classes.main}>
-            <img src={summary.avatar}/>
+            <img src={summary.avatar} className={classes.avatar}/>
                     
             <p>你好! <span className={classes.highlight}>{summary.username}</span></p>
             
@@ -31,7 +35,7 @@ class SummarySection extends React.Component {
             <p>发表文章<span className={classes.highlight}>{summary.articles_num}</span>篇，
             写下文字<span className={classes.highlight}>{summary.articles_words_num}</span>个，文章收获喜欢
             <span className={classes.highlight}>{summary.articles_be_liked_times}</span>个，喜欢文章
-            <span className={classes.highlight}>{summary.like_articles_times}</span>篇</p>
+            <span className={classes.highlight}>{summary.liked_articles_times}</span>篇</p>
             
             <p>关注专题<span className={classes.highlight}>{summary.topics_followed_num}</span>个，关注文集
             <span className={classes.highlight}>{summary.work_collects_followed_num}</span>个</p>

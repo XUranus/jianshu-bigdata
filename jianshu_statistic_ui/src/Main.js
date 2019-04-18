@@ -34,17 +34,16 @@ class Main extends React.Component {
     componentDidMount() {
         let hashCode = this.props.location.pathname.split('/')[2]
         console.log('hashCode:',hashCode)
-        
+        var _this = this
         axios({
-            method:'post',
-            url:env.apiServerAddr+'/api/submit',
-            data:{uid:hashCode},
-            withCredentials:true,
+            method:'get',
+            url:env.apiServerAddr+'/api/submit/'+hashCode,
             crossDomain:true,
         }).then(function (res) {
-            console.log(res);
+            console.log("data returned:",res.data.data);
             if(res.data.succ) {
-                this.setState({data:res.data.data})
+                _this.setState({data:res.data.data})
+                console.log("section loaded")
             }
         }).catch(function (error) {
             console.log(error);

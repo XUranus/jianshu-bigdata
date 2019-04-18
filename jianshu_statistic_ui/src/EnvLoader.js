@@ -1,4 +1,4 @@
 const env = {
-    apiServerAddr:'http://localhost:9999'
+    apiServerAddr:'http://172.17.11.40:9000'
 }
 export default env
