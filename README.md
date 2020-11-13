@@ -7,7 +7,7 @@
  - SparkSQL存储:MySQL
  - 前端:React,Echarts
 
-**注意：sbt依赖下载很慢很慢，尤其是play，务必自备梯子！**
+> 注意：sbt依赖下载很慢很慢，自备梯子
 
 ### 效果
 ![demo.gif](demo.gif)
